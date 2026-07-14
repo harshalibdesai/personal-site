@@ -1,0 +1,48 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: block;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.item:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.itemLink {
+  display: block;
+}
+
+.itemLink:hover .itemTitle {
+  color: var(--accent);
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+
+.itemTitle {
+  margin-top: 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.summary {
+  margin-top: 0.4rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 60ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .itemTitle {
+    transition: none;
+  }
+}

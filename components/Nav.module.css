@@ -1,0 +1,78 @@
+.header {
+  padding-top: clamp(1.5rem, 5vw, 2.75rem);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.wordmark span {
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+}
+
+.link {
+  position: relative;
+  padding: 0.25rem 0;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--ink);
+}
+
+.linkActive {
+  color: var(--ink);
+}
+
+.index {
+  color: var(--ink-faint);
+  margin-right: 0.4em;
+}
+
+.linkActive .index {
+  color: var(--accent);
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1.5px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.linkActive .underline {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link,
+  .underline {
+    transition: none;
+  }
+}

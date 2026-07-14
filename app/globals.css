@@ -1,0 +1,189 @@
+/* ============================================================
+   DESIGN TOKENS
+   A "technical notebook" palette: cool paper / graphite ink,
+   not cream+serif, not black+neon. One warm rust accent used
+   sparingly. Edit these variables to retune the whole site.
+   ============================================================ */
+
+:root {
+  --bg: #f2f3ef;
+  --bg-raised: #ffffff;
+  --ink: #14171a;
+  --ink-soft: #4d5359;
+  --ink-faint: #7a8086;
+  --line: #d9dbd4;
+  --line-strong: #c2c5bd;
+  --accent: #c1502d;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(193, 80, 45, 0.1);
+  --focus-ring: #1b6ec2;
+
+  --font-display: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+
+  --max-width: 42rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15181b;
+    --bg-raised: #1c2023;
+    --ink: #ebe8e2;
+    --ink-soft: #a7acaf;
+    --ink-faint: #6e7377;
+    --line: #2a2f33;
+    --line-strong: #383e42;
+    --accent: #e2793f;
+    --accent-ink: #15181b;
+    --accent-soft: rgba(226, 121, 63, 0.14);
+    --focus-ring: #6fb3f2;
+
+    color-scheme: dark;
+  }
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* ============================================================
+   FOCUS STATES
+   Visible everywhere, keyboard-triggered only.
+   ============================================================ */
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   TYPOGRAPHY HELPERS
+   ============================================================ */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   LAYOUT SHELL
+   ============================================================ */
+
+.shell {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding-block: clamp(2rem, 6vw, 4.5rem);
+}
+
+/* ============================================================
+   MOTION
+   Respect reduced-motion preference site-wide.
+   ============================================================ */
+
+.fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+  }
+}

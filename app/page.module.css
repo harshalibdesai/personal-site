@@ -1,0 +1,73 @@
+.heading {
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  max-width: 20ch;
+}
+
+.lede {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 58ch;
+  color: var(--ink-soft);
+  font-size: 1.0625rem;
+}
+
+.lede p:first-child {
+  color: var(--ink);
+}
+
+.facts {
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  font-size: 0.95rem;
+  align-items: baseline;
+}
+
+.factLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.factValue {
+  color: var(--ink);
+}
+
+.editNote {
+  margin-top: 3rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+  line-height: 1.6;
+}
+
+.editNote code {
+  color: var(--accent);
+}
+
+@media (max-width: 30rem) {
+  .fact {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}
