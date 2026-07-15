@@ -9,30 +9,27 @@
 
 export const siteMeta = {
   // Shown in the nav bar and browser tab.
-  name: "Your Name",
-  tagline: "building in public",
+  name: "Harshali Desai",
+  tagline: "Product strategy. Enterprise scale. Learning in public.",
   // Used for <meta> tags / social previews.
   description:
-    "Notes from a Principal PM learning to build software with AI tools, in public.",
+    "Notes from a Principal Product Manager building enterprise products at scale while learning to code in public. Based in Krakow.",
   // Update once the site has a real domain, used for canonical URLs / OG tags.
   url: "https://example.com",
 };
 
 export const aboutContent = {
   eyebrow: "About",
-  heading: "Hi, I'm [Your Name] — REPLACE THIS COPY",
+  heading: "Hi, I'm Harshali and I love building products customers actually want to use",
   // --- PLACEHOLDER COPY BELOW — replace with your real bio ---
   paragraphs: [
-    "I'm a Principal Product Manager, [X years] into building software for [industry / kind of product]. [One sentence about the shape of your day job — team size, what you ship, who you ship it for.]",
-    "Right now I'm teaching myself to actually build things — not just spec them — using AI coding tools. This site is where I'm documenting that: what worked, what broke, what I got wrong on the first try, and what it's changing about how I think about product work.",
-    "I'm writing about it in public because [your real reason — e.g. accountability, wanting a peer group figuring out the same shift, wanting a record you can point back to]. If any of this is useful to you, or you're working through the same thing, [how you want people to reach you — email, a specific platform, etc.].",
+    "Hi, I'm Harshali and I love shipping products customers actually use.",
+    "I'm a Principal Product Manager with 12+ years in enterprise software. In my career, I've started products when they were just cool prototypes and turned them into offerings core to my organization's business - with over 1,000 businesses now using them. I've also shipped products that sounded promising but didn't perform in the market. Right now, I'm working on a journey management product at the start of its growth stage, and I'm loving every bit of it. My days involve shipping features, working cross-functionally with R&D and UX, and obsessing over the gap between what we build and what customers actually need.",
+    "Separately, I'm teaching myself to code in public — building end-to-end projects and shipping them. I want to explore how ideas translate into code, where the real friction lives, and what constraints actually shape the experience we design for. This site is where I'm documenting that: what worked, what broke, what I got wrong on the first try, and how it's reshaping how I think about product work.",
+    "I'm writing about it in public because the gap between strategy and implementation fascinates me, and I want to show what that journey actually looks like. If you're working through the same shift—or you have thoughts on product execution, enterprise building, or learning in public—reach out. harshalidesai88@gmail.com or find me on LinkedIn.",
   ],
   // Optional list of quick facts / links — leave empty array to hide the section entirely.
-  facts: [
-    { label: "Role", value: "Principal PM, [Company]" },
-    { label: "Building", value: "[current project / product]" },
-    { label: "Elsewhere", value: "[Twitter/X, LinkedIn, etc. — or remove]" },
-  ],
+  facts: [] as { label: string; value: string }[],
   // --- END PLACEHOLDER COPY ---
 };
 
@@ -54,3 +51,4 @@ export const writingContent = {
     href: string;
   }[],
 };
+
