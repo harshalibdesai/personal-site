@@ -30,12 +30,6 @@ export default function WritingPage() {
           <p className={styles.panelBody}>{writingContent.comingSoon.body}</p>
         </div>
       )}
-
-      <p className={styles.editNote}>
-        // once the newsletter feed is connected, push entries into{" "}
-        <code>writingContent.posts</code> in <code>content/site-content.ts</code>{" "}
-        — this page renders the list automatically.
-      </p>
     </article>
   );
 }

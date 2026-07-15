@@ -78,18 +78,3 @@
   font-size: 0.975rem;
   max-width: 52ch;
 }
-
-.editNote {
-  margin-top: 2.5rem;
-  padding: 0.9rem 1.1rem;
-  border: 1px dashed var(--line-strong);
-  border-radius: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  color: var(--ink-faint);
-  line-height: 1.6;
-}
-
-.editNote code {
-  color: var(--accent);
-}

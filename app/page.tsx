@@ -28,11 +28,6 @@ export default function AboutPage() {
           ))}
         </dl>
       )}
-
-      <p className={styles.editNote}>
-        // placeholder copy — edit <code>aboutContent</code> in{" "}
-        <code>content/site-content.ts</code>
-      </p>
     </article>
   );
 }
