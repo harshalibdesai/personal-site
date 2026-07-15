@@ -13,9 +13,9 @@ export const siteMeta = {
   tagline: "Build products with me",
   // Used for <meta> tags / social previews.
   description:
-    "Notes from a Principal Product Manager building enterprise products at scale while learning to code in public. Based in Krakow.",
+    "Notes from a Principal Product Manager building enterprise products at scale while learning to code in public.",
   // Update once the site has a real domain, used for canonical URLs / OG tags.
-  url: "https://example.com",
+  url: "https://harshalidesai.com",
 };
 
 export const aboutContent = {
