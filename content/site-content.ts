@@ -34,7 +34,7 @@ export const aboutContent = {
 
 export const writingContent = {
   eyebrow: "Writing",
-  heading: "Notes on building in public",
+  heading: "Product notes",
   intro:
     "This page will pull posts in automatically from my newsletter. Until that's wired up, here's what's coming.",
   comingSoon: {
