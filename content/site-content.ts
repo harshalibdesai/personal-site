@@ -10,7 +10,7 @@
 export const siteMeta = {
   // Shown in the nav bar and browser tab.
   name: "Harshali Desai",
-  tagline: "Product strategy. Enterprise scale. Learning in public.",
+  tagline: "Build products with me",
   // Used for <meta> tags / social previews.
   description:
     "Notes from a Principal Product Manager building enterprise products at scale while learning to code in public. Based in Krakow.",
