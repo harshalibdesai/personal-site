@@ -35,15 +35,22 @@ export const aboutContent = {
 export const writingContent = {
   eyebrow: "Writing",
   heading: "Product notes",
-  intro:
-    "This page will pull posts in automatically from my newsletter. Until that's wired up, here's what's coming.",
+  intro: "Cross-posted from my newsletter.",
   comingSoon: {
     heading: "First posts are on the way",
     body: "I'm writing about the process of learning to build software with AI tools as a product manager — the workflow, the mistakes, the moments it clicked. Posts will show up here as soon as the newsletter feed is connected.",
   },
   // Drop future posts into this array — the list below renders automatically,
   // no layout changes needed. Leave it empty until the feed is connected.
-  posts: [] as {
+  posts: [
+    {
+      title: "A product manager's two projects",
+      date: "2026-07-16",
+      summary:
+        "Enterprise PM craft, plus a real-time, messy meal-planning app build",
+      href: "https://open.substack.com/pub/harshalidesai/p/a-product-managers-two-projects?r=3hisx8&utm_campaign=post&utm_medium=web",
+    },
+  ] as {
     title: string;
     date: string; // ISO format, e.g. "2026-08-01"
     summary: string;

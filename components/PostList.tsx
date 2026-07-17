@@ -16,21 +16,29 @@ export type Post = {
 export default function PostList({ posts }: { posts: Post[] }) {
   return (
     <ol className={styles.list}>
-      {posts.map((post) => (
-        <li className={styles.item} key={post.href}>
-          <Link href={post.href} className={styles.itemLink}>
-            <time className={styles.date} dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })}
-            </time>
-            <h2 className={styles.itemTitle}>{post.title}</h2>
-            <p className={styles.summary}>{post.summary}</p>
-          </Link>
-        </li>
-      ))}
+      {posts.map((post) => {
+        const isExternal = /^https?:\/\//.test(post.href);
+        return (
+          <li className={styles.item} key={post.href}>
+            <Link
+              href={post.href}
+              className={styles.itemLink}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+            >
+              <time className={styles.date} dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </time>
+              <h2 className={styles.itemTitle}>{post.title}</h2>
+              <p className={styles.summary}>{post.summary}</p>
+            </Link>
+          </li>
+        );
+      })}
     </ol>
   );
 }
